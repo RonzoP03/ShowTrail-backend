@@ -4,9 +4,13 @@ import connectDB from "./config/db.js";
 import userRoutes from "./routes/userRoutes.js";
 import { errorHandler, notFound } from "./middleware/errorMiddleware.js";
 
+const cors = require('cors')
+
 const serverless = require('serverless-http')
 
 const app = express(); // main thing
+
+app.use(cors())
  
 dotenv.config();
 
