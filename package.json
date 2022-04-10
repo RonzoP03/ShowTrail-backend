@@ -2,8 +2,7 @@
   "name": "showtrail-backend",
   "version": "1.0.0",
   "description": "Backend service for ShowTrail",
-  "main": "server.js",
-  "type": "module",
+  "main": "./src/api.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "./node_modules/.bin/netlify-lambda serve src",

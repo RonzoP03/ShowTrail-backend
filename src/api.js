@@ -7,15 +7,15 @@ import { errorHandler, notFound } from "./middleware/errorMiddleware.js";
 
 const serverless = require('serverless-http')
 
+const app = express(); // main thing
+ 
 dotenv.config();
 
 connectDB();
 
-const app = express(); // main thing
-
 app.use(express.json()); // to accept json data
 
-app.use("/.netifly/functions/api/users", userRoutes);
+app.use("/.netlify/functions/api", userRoutes);
 
 // Error Handling middlewares
 app.use(notFound);
