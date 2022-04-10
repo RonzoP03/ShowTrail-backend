@@ -1,7 +1,6 @@
 import express from "express";
 import dotenv from "dotenv";
 import connectDB from "./config/db.js";
-
 import userRoutes from "./routes/userRoutes.js";
 import { errorHandler, notFound } from "./middleware/errorMiddleware.js";
 
@@ -21,4 +20,4 @@ app.use("/.netlify/functions/api", userRoutes);
 app.use(notFound);
 app.use(errorHandler);
 
-module.exports.handler = serverless(app)
+exports.handler = serverless(app)
